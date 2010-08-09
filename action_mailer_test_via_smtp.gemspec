@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "action_mailer_test_via_smtp.gemspec",
      "lib/action_mailer_test_via_smtp.rb",
      "test/helper.rb",
      "test/test_action_mailer_test_via_smtp.rb"
