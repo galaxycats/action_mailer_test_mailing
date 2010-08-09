@@ -5,10 +5,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "action_mailer_test_via_smtp"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{test mails via smtp with actionmailer}
+    gem.description = %Q{Set one test-reciepient which gets all mails from th app in for example a test/staging environment }
     gem.email = "andi@galaxycats.com"
-    gem.homepage = "http://github.com/thyphoon/action_mailer_test_via_smtp"
+    gem.homepage = "http://github.com/galaxycats/action_mailer_test_via_smtp"
     gem.authors = ["Andi Bade"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings

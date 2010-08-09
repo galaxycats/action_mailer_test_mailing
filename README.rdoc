@@ -13,6 +13,7 @@ Load the gem
 
 and in you staging.rb (environment file) you can configure this mode
   
+  require "action_mailer_test_via_smtp"
   config.action_mailer.delivery_method = :test_via_smtp
   config.action_mailer.test_recipient = "andi@galaxycats.com"
 
