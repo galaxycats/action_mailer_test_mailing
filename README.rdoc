@@ -1,6 +1,23 @@
 = action_mailer_test_via_smtp
 
-Description goes here.
+If you want to test your e-mails not just in your log, this library is for you. It allows you to configure a
+test-recipient which gets all mails send via SMTP. Best for testing or staging evironments.
+
+At the moment, this library is only tested with Rails 2.3.8
+
+== Usage
+
+Load the gem
+
+  config.gem "action_mailer_test_via_smtp"
+
+and in you staging.rb (environment file) you can configure this mode
+  
+  config.action_mailer.delivery_method = :test_via_smtp
+  config.action_mailer.test_recipient = "andi@galaxycats.com"
+
+now every single mail will be sent to the test_recipient, prefixed with the original recipient.
+
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +31,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Andi Bade. See LICENSE for details.
+Copyright (c) 2010 Galaxy Cats IT Consulting GmbH. See LICENSE for details.
