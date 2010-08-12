@@ -1,6 +1,6 @@
-require "action_mailer_test_via_smtp/header_renderer/base"
+require "action_mailer_test_mailing/header_renderer/base"
 
-module ActionMailerTestViaSmtp
+module ActionMailerTestMailing
   module HeaderRenderer
     class Standard < Base
       

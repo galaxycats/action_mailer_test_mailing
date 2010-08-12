@@ -1,7 +1,7 @@
-= action_mailer_test_via_smtp
+= action_mailer_test_mailing
 
 If you want to test your e-mails not just in your log, this library is for you. It allows you to configure a
-test-recipient which gets all mails send via SMTP. Best for testing or staging evironments.
+test-recipient which gets all mails send via SMTP. Best for testing or staging environments.
 
 At the moment, this library is only tested with Rails 2.3.8
 
@@ -9,11 +9,11 @@ At the moment, this library is only tested with Rails 2.3.8
 
 Load the gem
 
-  config.gem "action_mailer_test_via_smtp"
+  config.gem "action_mailer_test_mailing"
 
 and in you staging.rb (environment file) you can configure this mode
   
-  require "action_mailer_test_via_smtp"
+  require "action_mailer_test_mailing"
   config.action_mailer.delivery_method = :test_via_smtp
   config.action_mailer.test_recipient = "andi@galaxycats.com"
 
@@ -37,7 +37,7 @@ You can change the standard test mail header by writing your own renderer. Just 
   
 Your class should look something like this
 
-  class CustomMailHeaderRenderer < ActionMailerTestViaSmtp::HeaderRenderer::Base
+  class CustomMailHeaderRenderer < ActionMailerTestMailing::HeaderRenderer::Base
     def test_mail_header
       # you can access 'mail' which is a TMail::Mail
       "return a prepared string"

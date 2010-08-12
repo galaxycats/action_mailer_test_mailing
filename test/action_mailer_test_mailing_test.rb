@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ActionMailerTestViaSmtpTest < ActiveSupport::TestCase
+class ActionMailerTestMailingTest < ActiveSupport::TestCase
   
   test "should add content to body" do
     Notifier.deliveries = []

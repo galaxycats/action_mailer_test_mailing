@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "action_mailer_test_via_smtp"
+    gem.name = "action_mailer_test_mailing"
     gem.summary = %Q{test mails via smtp with actionmailer}
     gem.description = %Q{Set one test-reciepient which gets all mails from th app in for example a test/staging environment }
     gem.email = "andi@galaxycats.com"
-    gem.homepage = "http://github.com/galaxycats/action_mailer_test_via_smtp"
+    gem.homepage = "http://github.com/galaxycats/action_mailer_test_mailing"
     gem.authors = ["Andi Bade"]
     # gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -47,7 +47,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "action_mailer_test_via_smtp #{version}"
+  rdoc.title = "action_mailer_test_mailing #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

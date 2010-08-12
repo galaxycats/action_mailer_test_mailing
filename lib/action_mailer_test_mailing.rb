@@ -1,11 +1,11 @@
-require "action_mailer_test_via_smtp/header_renderer/standard"
+require "action_mailer_test_mailing/header_renderer/standard"
 
 module ActionMailer
   class Base
     @@test_recipient = false
     cattr_accessor :test_recipient
     
-    @@test_mail_header_renderer = ActionMailerTestViaSmtp::HeaderRenderer::Standard
+    @@test_mail_header_renderer = ActionMailerTestMailing::HeaderRenderer::Standard
     cattr_accessor :test_mail_header_renderer
     
     def test_mail_header_renderer(mail)
@@ -42,5 +42,5 @@ module ActionMailer
   end
 end
 
-module ActionMailerTestViaSmtp
+module ActionMailerTestMailing
 end

@@ -11,7 +11,7 @@ require "active_support"
 require "active_support/test_case"
 require "active_support/core_ext"
 require "action_mailer"
-require "action_mailer_test_via_smtp"
+require "action_mailer_test_mailing"
 require "mocha"
 
 ActionMailer::Base.delivery_method = :test_via_test

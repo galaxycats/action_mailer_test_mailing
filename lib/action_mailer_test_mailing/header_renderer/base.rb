@@ -1,4 +1,4 @@
-module ActionMailerTestViaSmtp
+module ActionMailerTestMailing
   module HeaderRenderer
     class Base
       
