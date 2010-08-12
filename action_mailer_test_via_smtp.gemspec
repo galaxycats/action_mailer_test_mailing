@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{action_mailer_test_via_smtp}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andi Bade"]
-  s.date = %q{2010-08-09}
+  s.date = %q{2010-08-12}
   s.description = %q{Set one test-reciepient which gets all mails from th app in for example a test/staging environment }
   s.email = %q{andi@galaxycats.com}
   s.extra_rdoc_files = [
@@ -19,14 +19,18 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     "Gemfile",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
      "action_mailer_test_via_smtp.gemspec",
      "lib/action_mailer_test_via_smtp.rb",
-     "test/helper.rb",
-     "test/test_action_mailer_test_via_smtp.rb"
+     "test/action_mailer_test_via_smtp_test.rb",
+     "test/templates/notifier/multipart_email.text.html.erb",
+     "test/templates/notifier/multipart_email.text.plain.erb",
+     "test/templates/notifier/plain_text_email.erb",
+     "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/galaxycats/action_mailer_test_via_smtp}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -34,8 +38,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{test mails via smtp with actionmailer}
   s.test_files = [
-    "test/helper.rb",
-     "test/test_action_mailer_test_via_smtp.rb"
+    "test/action_mailer_test_via_smtp_test.rb",
+     "test/test_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -43,12 +47,9 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     end
   else
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
 end
 
