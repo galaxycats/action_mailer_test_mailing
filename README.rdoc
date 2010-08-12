@@ -19,6 +19,15 @@ and in you staging.rb (environment file) you can configure this mode
 
 now every single mail will be sent to the test_recipient, prefixed with the original recipient.
 
+Since 0.2.0 you can also test 'sendmail' and even 'test':
+  
+  config.action_mailer.delivery_method = :test_via_sendmail
+
+or
+  
+  config.action_mailer.delivery_method = :test_via_test
+
+I know, the gem name is not valid anymore.
 
 == Note on Patches/Pull Requests
  
