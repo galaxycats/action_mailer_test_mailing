@@ -29,6 +29,27 @@ or
 
 I know, the gem name is not valid anymore.
 
+== Custom Mail-Header
+
+You can change the standard test mail header by writing your own renderer. Just set
+
+  config.test_mail_header_renderer = CustomMailHeaderRenderer
+  
+Your class should look something like this
+
+  class CustomMailHeaderRenderer < ActionMailerTestViaSmtp::HeaderRenderer::Base
+    def test_mail_header
+      # you can access 'mail' which is a TMail::Mail
+      "return a prepared string"
+    end
+
+    def test_mail_header_html
+      # you can access 'mail' which is a TMail::Mail
+      "return a prepared string"
+    end
+  end
+  
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
